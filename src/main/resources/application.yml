@@ -5,8 +5,13 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/your-github-username/config-repo.git
-          default-label: main
+          uri: https://github.com/harry418/spring-cloud-config-server.git
+          default-label: master
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"   # Expose all actuator endpoints
 
 server:
   port: 8888
